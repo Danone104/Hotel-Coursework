@@ -1,0 +1,108 @@
+.header {
+    top: 0;
+    background-color: #6655BC;  
+    height: 75px;
+}
+.header__content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    max-width: 1180px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-block: 10px;
+}
+.logo{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    
+} 
+.logo__image{
+    height: 100%;
+    width: 75px;
+}
+.logo__name{
+    padding-top: 10px;
+}
+.logo:hover .logo__name-text{
+    text-decoration: underline;
+    cursor:pointer;
+}
+
+.logo__name-text{
+    font-size: 22px;
+    font-style: italic;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:black;
+}
+
+.header__navigation{
+    display: flex;
+    gap: 50px;
+}
+.header__nav-links{
+    display: flex;
+    gap: 15px;
+}
+.header__nav-link{  
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:black;
+    border-bottom:transparent solid 2px;
+}
+
+.header__nav-link:hover{
+    border-bottom: solid 2px;
+    cursor:pointer;
+}
+.header__nav-button{
+    padding-inline: 20px;
+    background-color: #4E4D4D;
+}
+.header__nav-button:hover{
+    background-color:dimgray;
+    cursor:pointer;
+}
+.header__nav-burger{
+    display: none;
+    background-color: #4E4D4D;
+    padding-inline: 5px;
+}
+.header__nav-burger:hover{
+    background-color:dimgray;
+    cursor:pointer;
+}
+
+@media (max-width:767px) {
+    .header__nav-links{
+        display: none;
+    }   
+    .header
+    .header__nav-burger{
+        display: block;
+    }
+    .header__navigation{
+        gap: 10px;
+    }
+    .logo__name{
+        display: none;
+    }
+    
+}
+@media (max-width:1180px){
+    .header__content{
+        padding-inline: 10px;
+    }
+}
+@media (max-width:1020px){
+    .header__content{
+        max-width: 780px;
+    }
+}
+

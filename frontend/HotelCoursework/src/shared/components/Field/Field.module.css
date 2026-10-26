@@ -1,0 +1,92 @@
+.field{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: relative;
+    margin-bottom: 10px;
+    &:has(input[type='checkbox']){
+        flex-direction: row-reverse;
+        justify-content: start;
+        font-size: 14px;
+    }
+}
+
+.input{
+    padding-inline: 16px;
+    width: 100%;
+    border: 2px solid;
+    border-radius: 5px;
+    max-height: 30px;
+    min-height: 25px;
+    height: 100%; 
+    font-family: inherit; 
+    &[type='checkbox']{
+        width: 25px;
+        min-height: 20px;
+    }
+
+    &:disabled{
+        border: 2px solid gray;
+        cursor: not-allowed;
+        background-color: white;
+    }
+}
+
+.error{
+    position: absolute;
+    color: red;
+    font-size: 10px;
+    top: 100%;
+    left: 0%;
+}
+input.input-error{
+    border-color: red;
+    &:focus-visible{
+        border-color: red;
+        outline: none;
+    }
+}
+.input-password-wrapper{
+    position: relative;
+    width: 100%;
+}
+.input-password{
+    padding-inline: 16px;
+    width: 100%;
+    border: 2px solid;
+    border-radius: 5px;
+    max-height: 30px;
+    min-height: 25px;
+    height: 100%; 
+    font-family: inherit;
+    padding-right: 40px;
+    
+}
+.input-password.hidden{
+    font-weight: bold;
+}
+.show-button{
+    background-image: url('@/assets/close-eye.svg'); 
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    max-height: 25px;
+    min-height: 20px;
+    width: 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    background-color: transparent;
+    transform: translateY(-50%);
+    right: 2%;
+    top: 50%;
+}
+.show-button.show{
+    background-image: url('@/assets/eye.svg'); 
+}
+
+
+
+
+

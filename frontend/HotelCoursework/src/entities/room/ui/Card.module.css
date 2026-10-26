@@ -1,0 +1,76 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 10px ;
+    background-color: white;
+    height: 400px;
+    width: 320px;
+    padding-bottom: 10px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.card__head{
+    height: 50%; 
+    border-radius: inherit;
+}
+.card__head-image{
+    border-radius: inherit;
+    width: 100%;
+    height: 90%;
+}
+.card__head-title{
+    text-align: center;
+    font-style: inherit;
+    word-break: break-all;
+}
+
+.card__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-inline: 20px;
+    padding-block: 10px;
+    height: 40%;
+
+}
+.card__content-description{
+    font-size: 14px;
+    overflow: hidden;
+}
+.card__content-description::before {
+    content: "Описание: ";
+    color: #888;
+}
+
+.count::before {
+    content: "Вместительность: ";
+    color: #888;
+}
+
+.price::before {
+    content: "Стоимость: ";
+    color: #888;
+}
+.card__content-info{
+    color: brown;
+}
+.count{
+    display: block;
+}
+.price{
+    display: block;
+}
+.card__button-container{
+    width: 90%;
+    margin: auto;
+}
+.card__button{
+    background-color: #259BC2;
+    width: 100%;
+    border-radius: 10px;
+}
+.card__button:hover{
+    background-color: #1B88AC;
+    cursor:pointer;
+}

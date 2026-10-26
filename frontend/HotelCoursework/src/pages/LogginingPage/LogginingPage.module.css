@@ -1,0 +1,116 @@
+.loggining-content{
+    display: flex;
+    flex-direction: column  ;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-block: 10px;
+}
+.loggining-alert{
+    display: none;
+    border-radius: 40px;
+    min-width: 350px;
+    min-height: 50px;
+    text-align: center;
+    padding-top: 10px;
+}
+.loggining-alert.success{
+    display: block;
+    background-color: rgb(180, 234, 180);
+    border: 2px solid green;
+    color: green;
+   
+}
+.loggining-alert.error{
+    display: block;
+    background-color: rgb(234, 180, 180);
+    border: 2px solid red;
+    color: red;
+   
+}
+.login-form{
+    display: flex;
+    background-color:rgb(161, 214, 196);
+    flex-direction: column;
+    justify-content: space-between;
+    padding-block: 30px;
+    padding-inline: 50px;
+    align-items: center;
+    min-height: 300px;
+    min-width: 380px;
+    border-radius: 40px;
+    border: solid 2px;
+
+}
+.form-label{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+.register-form{
+    display: flex;
+    background-color:rgb(161, 214, 196);
+    flex-direction: column;
+    gap: 20px;
+    padding-block: 10px;
+    padding-inline: 50px;
+    align-items: center;
+    min-height: 350px;
+    min-width: 420px;
+    border-radius: 40px;
+    border: solid 2px;
+
+}
+.form-button{
+    padding-inline: 20px;
+    background-color: #4E4D4D;
+}
+
+.form-button:hover{
+    background-color:dimgray;
+    cursor:pointer;
+}
+
+.patronymic{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.loggining-inputs{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+}
+.loggining-navigation{
+    display: flex;
+}
+.loggining-navigation__button{
+    font-size: 20px;
+    padding: 5px;
+    border-bottom: solid 2px transparent;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.is-active{
+    background-color:rgba(235, 240, 240, 0.7);
+    border-bottom: solid 2px;
+    transition-duration: 0.5s;
+}
+@media (max-width:426px){
+    .loggining-content{
+        padding-inline: 10px;
+    }
+    .register-form{
+        width: 100%;
+        min-width: 255px;
+    }
+    .login-form{
+        width: 100%;
+        min-width: 255px;
+    }
+    .loggining-alert{
+        width: 90%;
+        min-width: 180px;
+    }
+}

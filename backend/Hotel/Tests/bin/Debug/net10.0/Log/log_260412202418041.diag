@@ -1,0 +1,41 @@
+2026-04-12T20:24:18.0490235+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Version: 1.9.1+cb5afc3bb9bb01ebd75b57f89e8358b914ee2a49
+2026-04-12T20:24:18.0641466+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging mode: asynchronous
+2026-04-12T20:24:18.0652434+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging level: Information
+2026-04-12T20:24:18.0652507+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION CreateBuilderAsync entry time: 20:24:18.018
+2026-04-12T20:24:18.0653295+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION PID: 24840
+2026-04-12T20:24:18.0653596+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime information: win-x64 - .NET 10.0.2
+2026-04-12T20:24:18.0653789+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime location: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\10.0.2\System.Private.CoreLib.dll
+2026-04-12T20:24:18.0653915+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION IsDynamicCodeSupported: True
+2026-04-12T20:24:18.0654553+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Test module: C:\Users\danyk\source\repos\Hotel\Tests\bin\Debug\net10.0\Tests.dll
+2026-04-12T20:24:18.0655753+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Command line arguments: '--server --diagnostic --diagnostic-verbosity Information --diagnostic-output-directory C:\Users\danyk\source\repos\Hotel\Tests\bin\Debug\net10.0\Log --results-directory C:\Users\danyk\source\repos\Hotel\TestResults --client-port 51509'
+2026-04-12T20:24:18.0664292+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION TESTINGPLATFORM_DEFAULT_HANG_TIMEOUT: ''
+2026-04-12T20:24:18.0989126+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting RegisterEnvironmentVariablesConfigurationSource: 'True'
+2026-04-12T20:24:18.1216535+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting PlatformExitProcessOnUnhandledException: 'False', config file: False environment variable: 
+2026-04-12T20:24:18.3945385+00:00 Microsoft.Testing.Platform.Requests.TestHostTestFrameworkInvoker INFORMATION Test framework UID: '30ea7c6e-dd24-4152-a360-1387158cd41d' Version: '3.2.2' DisplayName: 'xUnit.net v3 Microsoft.Testing.Platform test framework' Description: 'xUnit.net v3 Microsoft.Testing.Platform test framework'
+2026-04-12T20:24:18.4046075+00:00 xUnit.net INFORMATION xUnit.net v3 In-Process Runner v3.2.2+728c1dce01 (64-bit .NET 10.0.2)
+2026-04-12T20:24:18.4540709+00:00 xUnit.net INFORMATION   Discovering: Tests
+2026-04-12T20:24:18.5045278+00:00 xUnit.net INFORMATION   Discovered:  Tests
+2026-04-12T20:24:18.5275087+00:00 xUnit.net INFORMATION   Starting:    Tests
+2026-04-12T20:24:18.7432149+00:00 xUnit.net ERROR     Hotel.Application.UnitTests.Services.BookingServiceTests.GetOccupiedDatesByMonthAsync_ReturnsOccupiedDates [FAIL]
+2026-04-12T20:24:18.7436135+00:00 xUnit.net INFORMATION       System.ArgumentException : Дата заселения не может быть меньше сегодняшней даты
+2026-04-12T20:24:18.7439150+00:00 xUnit.net INFORMATION       Stack Trace:
+2026-04-12T20:24:18.7446419+00:00 xUnit.net INFORMATION         C:\Users\danyk\source\repos\Hotel\Domain\Models\Booking.cs(26,0): at Hotel.Domain.Models.Booking..ctor(Guid clientId, Guid roomId, DateOnly checkin, DateOnly checkout, Decimal priceRoom)
+2026-04-12T20:24:18.7446674+00:00 xUnit.net INFORMATION         C:\Users\danyk\source\repos\Hotel\Tests\UnitTests\Services\BookingServiceTests.cs(178,0): at Hotel.Application.UnitTests.Services.BookingServiceTests.GetOccupiedDatesByMonthAsync_ReturnsOccupiedDates()
+2026-04-12T20:24:18.7446717+00:00 xUnit.net INFORMATION         --- End of stack trace from previous location ---
+2026-04-12T20:24:18.7921523+00:00 xUnit.net ERROR     Hotel.Application.UnitTests.Services.BookingServiceTests.ExtendBookingAsync_ValidExtension_ExtendsBooking [FAIL]
+2026-04-12T20:24:18.7921785+00:00 xUnit.net INFORMATION       System.ArgumentException : Комнаты с id 67bb2c32-c2a4-4529-92f2-6cad9cb3391e не существует
+2026-04-12T20:24:18.7921975+00:00 xUnit.net INFORMATION       Stack Trace:
+2026-04-12T20:24:18.7922172+00:00 xUnit.net INFORMATION         C:\Users\danyk\source\repos\Hotel\Hotel.Application\Services\BookingService.cs(37,0): at Hotel.Application.Services.BookingService.IsRoomAvailableForPeriodAsync(Guid roomId, DateOnly checkIn, DateOnly checkOut)
+2026-04-12T20:24:18.7922250+00:00 xUnit.net INFORMATION         C:\Users\danyk\source\repos\Hotel\Hotel.Application\Services\BookingService.cs(156,0): at Hotel.Application.Services.BookingService.ExtendBookingAsync(Guid bookId, DateOnly dateCheckOut)
+2026-04-12T20:24:18.7922363+00:00 xUnit.net INFORMATION         C:\Users\danyk\source\repos\Hotel\Tests\UnitTests\Services\BookingServiceTests.cs(161,0): at Hotel.Application.UnitTests.Services.BookingServiceTests.ExtendBookingAsync_ValidExtension_ExtendsBooking()
+2026-04-12T20:24:18.7922374+00:00 xUnit.net INFORMATION         --- End of stack trace from previous location ---
+2026-04-12T20:24:18.8141667+00:00 xUnit.net ERROR     Hotel.Application.UnitTests.Services.BookingServiceTests.CreateBookingAsync_ValidData_CreatesBooking [FAIL]
+2026-04-12T20:24:18.8142015+00:00 xUnit.net INFORMATION       System.ArgumentException : Комнаты с id 6f42e4b7-f0f1-44fb-ad9a-82367a90a86b не существует
+2026-04-12T20:24:18.8142152+00:00 xUnit.net INFORMATION       Stack Trace:
+2026-04-12T20:24:18.8142383+00:00 xUnit.net INFORMATION         C:\Users\danyk\source\repos\Hotel\Hotel.Application\Services\BookingService.cs(37,0): at Hotel.Application.Services.BookingService.IsRoomAvailableForPeriodAsync(Guid roomId, DateOnly checkIn, DateOnly checkOut)
+2026-04-12T20:24:18.8142514+00:00 xUnit.net INFORMATION         C:\Users\danyk\source\repos\Hotel\Hotel.Application\Services\BookingService.cs(47,0): at Hotel.Application.Services.BookingService.CreateBookingAsync(Guid userId, Guid roomId, DateOnly checkIn, DateOnly checkOut)
+2026-04-12T20:24:18.8142682+00:00 xUnit.net INFORMATION         C:\Users\danyk\source\repos\Hotel\Tests\UnitTests\Services\BookingServiceTests.cs(51,0): at Hotel.Application.UnitTests.Services.BookingServiceTests.CreateBookingAsync_ValidData_CreatesBooking()
+2026-04-12T20:24:18.8142711+00:00 xUnit.net INFORMATION         --- End of stack trace from previous location ---
+2026-04-12T20:24:18.8341866+00:00 xUnit.net INFORMATION   Finished:    Tests (ID = '986fff2a7a006cc09b209b5c3c7f8bd02ee5ebca422be788f8c022dcca61dc96')
+2026-04-12T20:24:18.8411676+00:00 xUnit.net INFORMATION === TEST EXECUTION SUMMARY ===
+2026-04-12T20:24:18.8450688+00:00 xUnit.net INFORMATION    Tests  Total: 11, Errors: 0, Failed: 3, Skipped: 0, Not Run: 0, Time: 0,307s

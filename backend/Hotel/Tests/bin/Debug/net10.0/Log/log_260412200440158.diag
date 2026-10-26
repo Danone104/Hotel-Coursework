@@ -1,0 +1,46 @@
+2026-04-12T20:04:40.1665473+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Version: 1.9.1+cb5afc3bb9bb01ebd75b57f89e8358b914ee2a49
+2026-04-12T20:04:40.1750748+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging mode: asynchronous
+2026-04-12T20:04:40.1760021+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging level: Information
+2026-04-12T20:04:40.1760086+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION CreateBuilderAsync entry time: 20:04:40.149
+2026-04-12T20:04:40.1760994+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION PID: 16600
+2026-04-12T20:04:40.1761483+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime information: win-x64 - .NET 10.0.2
+2026-04-12T20:04:40.1761681+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime location: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\10.0.2\System.Private.CoreLib.dll
+2026-04-12T20:04:40.1761769+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION IsDynamicCodeSupported: True
+2026-04-12T20:04:40.1762379+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Test module: C:\Users\danyk\source\repos\Hotel\Tests\bin\Debug\net10.0\Tests.dll
+2026-04-12T20:04:40.1763288+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Command line arguments: '--server --diagnostic --diagnostic-verbosity Information --diagnostic-output-directory C:\Users\danyk\source\repos\Hotel\Tests\bin\Debug\net10.0\Log --results-directory C:\Users\danyk\source\repos\Hotel\TestResults --client-port 55010'
+2026-04-12T20:04:40.1768601+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION TESTINGPLATFORM_DEFAULT_HANG_TIMEOUT: ''
+2026-04-12T20:04:40.1924107+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting RegisterEnvironmentVariablesConfigurationSource: 'True'
+2026-04-12T20:04:40.2032536+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting PlatformExitProcessOnUnhandledException: 'False', config file: False environment variable: 
+2026-04-12T20:04:40.3915310+00:00 Microsoft.Testing.Platform.Requests.TestHostTestFrameworkInvoker INFORMATION Test framework UID: '30ea7c6e-dd24-4152-a360-1387158cd41d' Version: '3.2.2' DisplayName: 'xUnit.net v3 Microsoft.Testing.Platform test framework' Description: 'xUnit.net v3 Microsoft.Testing.Platform test framework'
+2026-04-12T20:04:40.3992708+00:00 xUnit.net INFORMATION xUnit.net v3 In-Process Runner v3.2.2+728c1dce01 (64-bit .NET 10.0.2)
+2026-04-12T20:04:40.4375191+00:00 xUnit.net INFORMATION   Discovering: Tests
+2026-04-12T20:04:40.4722431+00:00 xUnit.net INFORMATION   Discovered:  Tests
+2026-04-12T20:04:40.4919855+00:00 xUnit.net INFORMATION   Starting:    Tests
+2026-04-12T20:04:41.9152091+00:00 xUnit.net ERROR     Hotel.IntegrationTests.Repositories.ClientRepositoryTests.LinkToUser_ClientWithoutUser_UpdatesSuccessfully [FAIL]
+2026-04-12T20:04:41.9155455+00:00 xUnit.net INFORMATION       Microsoft.EntityFrameworkCore.DbUpdateException : An error occurred while saving the entity changes. See the inner exception for details.
+2026-04-12T20:04:41.9155573+00:00 xUnit.net INFORMATION       ---- Microsoft.Data.Sqlite.SqliteException : SQLite Error 19: 'FOREIGN KEY constraint failed'.
+2026-04-12T20:04:41.9158191+00:00 xUnit.net INFORMATION       Stack Trace:
+2026-04-12T20:04:41.9164668+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T20:04:41.9164844+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T20:04:41.9164905+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T20:04:41.9164954+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T20:04:41.9165000+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+2026-04-12T20:04:41.9165040+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+2026-04-12T20:04:41.9165092+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-04-12T20:04:41.9165130+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-04-12T20:04:41.9165167+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-04-12T20:04:41.9165291+00:00 xUnit.net INFORMATION         C:\Users\danyk\source\repos\Hotel\Hotel.DataAccess\Repositories\ClientRepository.cs(48,0): at Hotel.DataAccess.Repositories.ClientRepository.SaveChangesAsync()
+2026-04-12T20:04:41.9165428+00:00 xUnit.net INFORMATION         C:\Users\danyk\source\repos\Hotel\Tests\IntegrationTests\Repositories\ClientRepositoryTests.cs(228,0): at Hotel.IntegrationTests.Repositories.ClientRepositoryTests.LinkToUser_ClientWithoutUser_UpdatesSuccessfully()
+2026-04-12T20:04:41.9165443+00:00 xUnit.net INFORMATION         --- End of stack trace from previous location ---
+2026-04-12T20:04:41.9165450+00:00 xUnit.net INFORMATION         ----- Inner Stack Trace -----
+2026-04-12T20:04:41.9165481+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+2026-04-12T20:04:41.9165500+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+2026-04-12T20:04:41.9165524+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+2026-04-12T20:04:41.9165558+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+2026-04-12T20:04:41.9165593+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+2026-04-12T20:04:41.9165638+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+2026-04-12T20:04:41.9165687+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+2026-04-12T20:04:41.9165731+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T20:04:41.9234999+00:00 xUnit.net INFORMATION   Finished:    Tests (ID = '986fff2a7a006cc09b209b5c3c7f8bd02ee5ebca422be788f8c022dcca61dc96')
+2026-04-12T20:04:41.9274120+00:00 xUnit.net INFORMATION === TEST EXECUTION SUMMARY ===
+2026-04-12T20:04:41.9314994+00:00 xUnit.net INFORMATION    Tests  Total: 10, Errors: 0, Failed: 1, Skipped: 0, Not Run: 0, Time: 1,435s

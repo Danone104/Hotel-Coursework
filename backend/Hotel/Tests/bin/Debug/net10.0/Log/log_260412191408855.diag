@@ -1,0 +1,246 @@
+2026-04-12T19:14:08.8598327+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Version: 1.9.1+cb5afc3bb9bb01ebd75b57f89e8358b914ee2a49
+2026-04-12T19:14:08.8684369+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging mode: asynchronous
+2026-04-12T19:14:08.8691439+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging level: Information
+2026-04-12T19:14:08.8691503+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION CreateBuilderAsync entry time: 19:14:08.844
+2026-04-12T19:14:08.8692122+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION PID: 26016
+2026-04-12T19:14:08.8692380+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime information: win-x64 - .NET 10.0.2
+2026-04-12T19:14:08.8692614+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime location: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\10.0.2\System.Private.CoreLib.dll
+2026-04-12T19:14:08.8692708+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION IsDynamicCodeSupported: True
+2026-04-12T19:14:08.8693268+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Test module: C:\Users\danyk\source\repos\Hotel\Tests\bin\Debug\net10.0\Tests.dll
+2026-04-12T19:14:08.8694533+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Command line arguments: '--server --diagnostic --diagnostic-verbosity Information --diagnostic-output-directory C:\Users\danyk\source\repos\Hotel\Tests\bin\Debug\net10.0\Log --results-directory C:\Users\danyk\source\repos\Hotel\TestResults --client-port 52905'
+2026-04-12T19:14:08.8704176+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION TESTINGPLATFORM_DEFAULT_HANG_TIMEOUT: ''
+2026-04-12T19:14:08.8858932+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting RegisterEnvironmentVariablesConfigurationSource: 'True'
+2026-04-12T19:14:08.8953160+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting PlatformExitProcessOnUnhandledException: 'False', config file: False environment variable: 
+2026-04-12T19:14:09.0774148+00:00 Microsoft.Testing.Platform.Requests.TestHostTestFrameworkInvoker INFORMATION Test framework UID: '30ea7c6e-dd24-4152-a360-1387158cd41d' Version: '3.2.2' DisplayName: 'xUnit.net v3 Microsoft.Testing.Platform test framework' Description: 'xUnit.net v3 Microsoft.Testing.Platform test framework'
+2026-04-12T19:14:09.0834070+00:00 xUnit.net INFORMATION xUnit.net v3 In-Process Runner v3.2.2+728c1dce01 (64-bit .NET 10.0.2)
+2026-04-12T19:14:09.1211340+00:00 xUnit.net INFORMATION   Discovering: Tests
+2026-04-12T19:14:09.1565555+00:00 xUnit.net INFORMATION   Discovered:  Tests
+2026-04-12T19:14:09.1752788+00:00 xUnit.net INFORMATION   Starting:    Tests
+2026-04-12T19:14:10.0674005+00:00 xUnit.net ERROR     Hotel.IntegrationTests.Repositories.BookingRepositoryTests.GetActiveBookingsByRoomAsync_ReturnsCorrectBookings [FAIL]
+2026-04-12T19:14:10.0681611+00:00 xUnit.net INFORMATION       Microsoft.EntityFrameworkCore.DbUpdateException : An error occurred while saving the entity changes. See the inner exception for details.
+2026-04-12T19:14:10.0681814+00:00 xUnit.net INFORMATION       ---- Microsoft.Data.Sqlite.SqliteException : SQLite Error 19: 'FOREIGN KEY constraint failed'.
+2026-04-12T19:14:10.0688020+00:00 xUnit.net INFORMATION       Stack Trace:
+2026-04-12T19:14:10.0696995+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T19:14:10.0697261+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T19:14:10.0697370+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T19:14:10.0697470+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T19:14:10.0697548+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+2026-04-12T19:14:10.0697633+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+2026-04-12T19:14:10.0697749+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-04-12T19:14:10.0697828+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-04-12T19:14:10.0697906+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-04-12T19:14:10.0698122+00:00 xUnit.net INFORMATION         C:\Users\danyk\source\repos\Hotel\Hotel.DataAccess\Repositories\BookingRepository.cs(144,0): at Hotel.DataAccess.Repositories.BookingRepository.SaveChangesAsync()
+2026-04-12T19:14:10.0698383+00:00 xUnit.net INFORMATION         C:\Users\danyk\source\repos\Hotel\Tests\IntegrationTests\Repositories\BookingReposirtoryTests.cs(130,0): at Hotel.IntegrationTests.Repositories.BookingRepositoryTests.GetActiveBookingsByRoomAsync_ReturnsCorrectBookings()
+2026-04-12T19:14:10.0698432+00:00 xUnit.net INFORMATION         --- End of stack trace from previous location ---
+2026-04-12T19:14:10.0698453+00:00 xUnit.net INFORMATION         ----- Inner Stack Trace -----
+2026-04-12T19:14:10.0698530+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+2026-04-12T19:14:10.0698575+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+2026-04-12T19:14:10.0698628+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+2026-04-12T19:14:10.0698701+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+2026-04-12T19:14:10.0698790+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+2026-04-12T19:14:10.0698887+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+2026-04-12T19:14:10.0698977+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+2026-04-12T19:14:10.0699064+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T19:14:10.1149371+00:00 xUnit.net ERROR     Hotel.IntegrationTests.Repositories.BookingRepositoryTests.GetOverlappingWithPeriodAsync_ReturnsOverlappingBookings [FAIL]
+2026-04-12T19:14:10.1149716+00:00 xUnit.net INFORMATION       Microsoft.EntityFrameworkCore.DbUpdateException : An error occurred while saving the entity changes. See the inner exception for details.
+2026-04-12T19:14:10.1149743+00:00 xUnit.net INFORMATION       ---- Microsoft.Data.Sqlite.SqliteException : SQLite Error 19: 'FOREIGN KEY constraint failed'.
+2026-04-12T19:14:10.1150027+00:00 xUnit.net INFORMATION       Stack Trace:
+2026-04-12T19:14:10.1150218+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T19:14:10.1150323+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T19:14:10.1150421+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T19:14:10.1150517+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T19:14:10.1150604+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+2026-04-12T19:14:10.1150688+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+2026-04-12T19:14:10.1150788+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-04-12T19:14:10.1150866+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-04-12T19:14:10.1150940+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-04-12T19:14:10.1151102+00:00 xUnit.net INFORMATION         C:\Users\danyk\source\repos\Hotel\Hotel.DataAccess\Repositories\BookingRepository.cs(144,0): at Hotel.DataAccess.Repositories.BookingRepository.SaveChangesAsync()
+2026-04-12T19:14:10.1151218+00:00 xUnit.net INFORMATION         C:\Users\danyk\source\repos\Hotel\Tests\IntegrationTests\Repositories\BookingReposirtoryTests.cs(87,0): at Hotel.IntegrationTests.Repositories.BookingRepositoryTests.GetOverlappingWithPeriodAsync_ReturnsOverlappingBookings()
+2026-04-12T19:14:10.1151245+00:00 xUnit.net INFORMATION         --- End of stack trace from previous location ---
+2026-04-12T19:14:10.1151264+00:00 xUnit.net INFORMATION         ----- Inner Stack Trace -----
+2026-04-12T19:14:10.1151377+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+2026-04-12T19:14:10.1151436+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+2026-04-12T19:14:10.1151487+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+2026-04-12T19:14:10.1151571+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+2026-04-12T19:14:10.1151663+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+2026-04-12T19:14:10.1151753+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+2026-04-12T19:14:10.1151855+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+2026-04-12T19:14:10.1151941+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T19:14:10.1863080+00:00 xUnit.net ERROR     Hotel.IntegrationTests.Repositories.BookingRepositoryTests.GetOverlappingWithPeriodAsync_NoOverlap_ReturnsEmpty [FAIL]
+2026-04-12T19:14:10.1863977+00:00 xUnit.net INFORMATION       Microsoft.EntityFrameworkCore.DbUpdateException : An error occurred while saving the entity changes. See the inner exception for details.
+2026-04-12T19:14:10.1864098+00:00 xUnit.net INFORMATION       ---- Microsoft.Data.Sqlite.SqliteException : SQLite Error 19: 'FOREIGN KEY constraint failed'.
+2026-04-12T19:14:10.1864348+00:00 xUnit.net INFORMATION       Stack Trace:
+2026-04-12T19:14:10.1864571+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T19:14:10.1864676+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T19:14:10.1864777+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T19:14:10.1864873+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T19:14:10.1864951+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+2026-04-12T19:14:10.1865039+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+2026-04-12T19:14:10.1865143+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-04-12T19:14:10.1865232+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-04-12T19:14:10.1865314+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-04-12T19:14:10.1865448+00:00 xUnit.net INFORMATION         C:\Users\danyk\source\repos\Hotel\Hotel.DataAccess\Repositories\BookingRepository.cs(144,0): at Hotel.DataAccess.Repositories.BookingRepository.SaveChangesAsync()
+2026-04-12T19:14:10.1865553+00:00 xUnit.net INFORMATION         C:\Users\danyk\source\repos\Hotel\Tests\IntegrationTests\Repositories\BookingReposirtoryTests.cs(104,0): at Hotel.IntegrationTests.Repositories.BookingRepositoryTests.GetOverlappingWithPeriodAsync_NoOverlap_ReturnsEmpty()
+2026-04-12T19:14:10.1865581+00:00 xUnit.net INFORMATION         --- End of stack trace from previous location ---
+2026-04-12T19:14:10.1865601+00:00 xUnit.net INFORMATION         ----- Inner Stack Trace -----
+2026-04-12T19:14:10.1865672+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+2026-04-12T19:14:10.1865717+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+2026-04-12T19:14:10.1865774+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+2026-04-12T19:14:10.1865848+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+2026-04-12T19:14:10.1865929+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+2026-04-12T19:14:10.1866025+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+2026-04-12T19:14:10.1866119+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+2026-04-12T19:14:10.1866210+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T19:14:10.1957899+00:00 xUnit.net ERROR     Hotel.IntegrationTests.Repositories.BookingRepositoryTests.GetActiveBookingAsync_ReturnsOnlyActiveBookings [FAIL]
+2026-04-12T19:14:10.1958066+00:00 xUnit.net INFORMATION       Microsoft.EntityFrameworkCore.DbUpdateException : An error occurred while saving the entity changes. See the inner exception for details.
+2026-04-12T19:14:10.1958081+00:00 xUnit.net INFORMATION       ---- Microsoft.Data.Sqlite.SqliteException : SQLite Error 19: 'FOREIGN KEY constraint failed'.
+2026-04-12T19:14:10.1958178+00:00 xUnit.net INFORMATION       Stack Trace:
+2026-04-12T19:14:10.1958273+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T19:14:10.1958319+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T19:14:10.1958362+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T19:14:10.1958412+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T19:14:10.1958445+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+2026-04-12T19:14:10.1958481+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+2026-04-12T19:14:10.1958527+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-04-12T19:14:10.1958560+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-04-12T19:14:10.1958593+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-04-12T19:14:10.1958649+00:00 xUnit.net INFORMATION         C:\Users\danyk\source\repos\Hotel\Hotel.DataAccess\Repositories\BookingRepository.cs(144,0): at Hotel.DataAccess.Repositories.BookingRepository.SaveChangesAsync()
+2026-04-12T19:14:10.1958706+00:00 xUnit.net INFORMATION         C:\Users\danyk\source\repos\Hotel\Tests\IntegrationTests\Repositories\BookingReposirtoryTests.cs(53,0): at Hotel.IntegrationTests.Repositories.BookingRepositoryTests.GetActiveBookingAsync_ReturnsOnlyActiveBookings()
+2026-04-12T19:14:10.1958716+00:00 xUnit.net INFORMATION         --- End of stack trace from previous location ---
+2026-04-12T19:14:10.1958721+00:00 xUnit.net INFORMATION         ----- Inner Stack Trace -----
+2026-04-12T19:14:10.1958745+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+2026-04-12T19:14:10.1958762+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+2026-04-12T19:14:10.1958784+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+2026-04-12T19:14:10.1958815+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+2026-04-12T19:14:10.1958847+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+2026-04-12T19:14:10.1958887+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+2026-04-12T19:14:10.1958934+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+2026-04-12T19:14:10.1958973+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2063746+00:00 xUnit.net ERROR     Hotel.IntegrationTests.Repositories.BookingRepositoryTests.AddBook_ValidBooking_BookingAdded [FAIL]
+2026-04-12T19:14:10.2064015+00:00 xUnit.net INFORMATION       Microsoft.EntityFrameworkCore.DbUpdateException : An error occurred while saving the entity changes. See the inner exception for details.
+2026-04-12T19:14:10.2064032+00:00 xUnit.net INFORMATION       ---- Microsoft.Data.Sqlite.SqliteException : SQLite Error 19: 'FOREIGN KEY constraint failed'.
+2026-04-12T19:14:10.2064133+00:00 xUnit.net INFORMATION       Stack Trace:
+2026-04-12T19:14:10.2064227+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2064280+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2064326+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2064372+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2064406+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2064444+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2064491+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2064526+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2064559+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2064620+00:00 xUnit.net INFORMATION         C:\Users\danyk\source\repos\Hotel\Hotel.DataAccess\Repositories\BookingRepository.cs(144,0): at Hotel.DataAccess.Repositories.BookingRepository.SaveChangesAsync()
+2026-04-12T19:14:10.2064665+00:00 xUnit.net INFORMATION         C:\Users\danyk\source\repos\Hotel\Tests\IntegrationTests\Repositories\BookingReposirtoryTests.cs(37,0): at Hotel.IntegrationTests.Repositories.BookingRepositoryTests.AddBook_ValidBooking_BookingAdded()
+2026-04-12T19:14:10.2064674+00:00 xUnit.net INFORMATION         --- End of stack trace from previous location ---
+2026-04-12T19:14:10.2064678+00:00 xUnit.net INFORMATION         ----- Inner Stack Trace -----
+2026-04-12T19:14:10.2064702+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+2026-04-12T19:14:10.2064720+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+2026-04-12T19:14:10.2064744+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+2026-04-12T19:14:10.2064775+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2064813+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2064855+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2064898+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2064937+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2142584+00:00 xUnit.net ERROR     Hotel.IntegrationTests.Repositories.BookingRepositoryTests.GetActiveByClientByPageAsync_ReturnsPaginatedResults [FAIL]
+2026-04-12T19:14:10.2142736+00:00 xUnit.net INFORMATION       Microsoft.EntityFrameworkCore.DbUpdateException : An error occurred while saving the entity changes. See the inner exception for details.
+2026-04-12T19:14:10.2142759+00:00 xUnit.net INFORMATION       ---- Microsoft.Data.Sqlite.SqliteException : SQLite Error 19: 'FOREIGN KEY constraint failed'.
+2026-04-12T19:14:10.2142860+00:00 xUnit.net INFORMATION       Stack Trace:
+2026-04-12T19:14:10.2142965+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2143014+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2143063+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2143113+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2143150+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2143191+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2143249+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2143286+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2143323+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2143383+00:00 xUnit.net INFORMATION         C:\Users\danyk\source\repos\Hotel\Hotel.DataAccess\Repositories\BookingRepository.cs(144,0): at Hotel.DataAccess.Repositories.BookingRepository.SaveChangesAsync()
+2026-04-12T19:14:10.2143431+00:00 xUnit.net INFORMATION         C:\Users\danyk\source\repos\Hotel\Tests\IntegrationTests\Repositories\BookingReposirtoryTests.cs(150,0): at Hotel.IntegrationTests.Repositories.BookingRepositoryTests.GetActiveByClientByPageAsync_ReturnsPaginatedResults()
+2026-04-12T19:14:10.2143445+00:00 xUnit.net INFORMATION         --- End of stack trace from previous location ---
+2026-04-12T19:14:10.2143450+00:00 xUnit.net INFORMATION         ----- Inner Stack Trace -----
+2026-04-12T19:14:10.2143477+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+2026-04-12T19:14:10.2143496+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+2026-04-12T19:14:10.2143520+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+2026-04-12T19:14:10.2143555+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2143591+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2143636+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2143682+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2143726+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2242313+00:00 xUnit.net ERROR     Hotel.IntegrationTests.Repositories.BookingRepositoryTests.GetTodaysActiveBookingAsync_ReturnsBookingsForToday [FAIL]
+2026-04-12T19:14:10.2242489+00:00 xUnit.net INFORMATION       Microsoft.EntityFrameworkCore.DbUpdateException : An error occurred while saving the entity changes. See the inner exception for details.
+2026-04-12T19:14:10.2242505+00:00 xUnit.net INFORMATION       ---- Microsoft.Data.Sqlite.SqliteException : SQLite Error 19: 'FOREIGN KEY constraint failed'.
+2026-04-12T19:14:10.2242607+00:00 xUnit.net INFORMATION       Stack Trace:
+2026-04-12T19:14:10.2242707+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2242765+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2242814+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2242862+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2242897+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2242936+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2242985+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2243021+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2243059+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2243125+00:00 xUnit.net INFORMATION         C:\Users\danyk\source\repos\Hotel\Hotel.DataAccess\Repositories\BookingRepository.cs(144,0): at Hotel.DataAccess.Repositories.BookingRepository.SaveChangesAsync()
+2026-04-12T19:14:10.2243172+00:00 xUnit.net INFORMATION         C:\Users\danyk\source\repos\Hotel\Tests\IntegrationTests\Repositories\BookingReposirtoryTests.cs(171,0): at Hotel.IntegrationTests.Repositories.BookingRepositoryTests.GetTodaysActiveBookingAsync_ReturnsBookingsForToday()
+2026-04-12T19:14:10.2243182+00:00 xUnit.net INFORMATION         --- End of stack trace from previous location ---
+2026-04-12T19:14:10.2243188+00:00 xUnit.net INFORMATION         ----- Inner Stack Trace -----
+2026-04-12T19:14:10.2243214+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+2026-04-12T19:14:10.2243233+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+2026-04-12T19:14:10.2243257+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+2026-04-12T19:14:10.2243290+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2243330+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2243374+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2243418+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2243459+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2391032+00:00 xUnit.net ERROR     Hotel.IntegrationTests.Repositories.BookingRepositoryTests.GetActiveAndCancelledForDateAsync_ReturnsCorrectStatuses [FAIL]
+2026-04-12T19:14:10.2391390+00:00 xUnit.net INFORMATION       Microsoft.EntityFrameworkCore.DbUpdateException : An error occurred while saving the entity changes. See the inner exception for details.
+2026-04-12T19:14:10.2391417+00:00 xUnit.net INFORMATION       ---- Microsoft.Data.Sqlite.SqliteException : SQLite Error 19: 'FOREIGN KEY constraint failed'.
+2026-04-12T19:14:10.2391604+00:00 xUnit.net INFORMATION       Stack Trace:
+2026-04-12T19:14:10.2391785+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2391887+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2391986+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2392086+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2392162+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2392247+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2392363+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2392442+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2392520+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2392634+00:00 xUnit.net INFORMATION         C:\Users\danyk\source\repos\Hotel\Hotel.DataAccess\Repositories\BookingRepository.cs(144,0): at Hotel.DataAccess.Repositories.BookingRepository.SaveChangesAsync()
+2026-04-12T19:14:10.2392742+00:00 xUnit.net INFORMATION         C:\Users\danyk\source\repos\Hotel\Tests\IntegrationTests\Repositories\BookingReposirtoryTests.cs(192,0): at Hotel.IntegrationTests.Repositories.BookingRepositoryTests.GetActiveAndCancelledForDateAsync_ReturnsCorrectStatuses()
+2026-04-12T19:14:10.2392780+00:00 xUnit.net INFORMATION         --- End of stack trace from previous location ---
+2026-04-12T19:14:10.2392800+00:00 xUnit.net INFORMATION         ----- Inner Stack Trace -----
+2026-04-12T19:14:10.2392857+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+2026-04-12T19:14:10.2392901+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+2026-04-12T19:14:10.2392956+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+2026-04-12T19:14:10.2393029+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2393104+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2393195+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2393307+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2393397+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2461695+00:00 xUnit.net ERROR     Hotel.IntegrationTests.Repositories.BookingRepositoryTests.GetRentedBookingsAsync_ReturnsRentedBookings [FAIL]
+2026-04-12T19:14:10.2461930+00:00 xUnit.net INFORMATION       Microsoft.EntityFrameworkCore.DbUpdateException : An error occurred while saving the entity changes. See the inner exception for details.
+2026-04-12T19:14:10.2461956+00:00 xUnit.net INFORMATION       ---- Microsoft.Data.Sqlite.SqliteException : SQLite Error 19: 'FOREIGN KEY constraint failed'.
+2026-04-12T19:14:10.2462172+00:00 xUnit.net INFORMATION       Stack Trace:
+2026-04-12T19:14:10.2462363+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2462466+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2462675+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2462784+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2462822+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2462859+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2462905+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2462938+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2462971+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2463073+00:00 xUnit.net INFORMATION         C:\Users\danyk\source\repos\Hotel\Hotel.DataAccess\Repositories\BookingRepository.cs(144,0): at Hotel.DataAccess.Repositories.BookingRepository.SaveChangesAsync()
+2026-04-12T19:14:10.2463119+00:00 xUnit.net INFORMATION         C:\Users\danyk\source\repos\Hotel\Tests\IntegrationTests\Repositories\BookingReposirtoryTests.cs(70,0): at Hotel.IntegrationTests.Repositories.BookingRepositoryTests.GetRentedBookingsAsync_ReturnsRentedBookings()
+2026-04-12T19:14:10.2463128+00:00 xUnit.net INFORMATION         --- End of stack trace from previous location ---
+2026-04-12T19:14:10.2463134+00:00 xUnit.net INFORMATION         ----- Inner Stack Trace -----
+2026-04-12T19:14:10.2463159+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+2026-04-12T19:14:10.2463177+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+2026-04-12T19:14:10.2463199+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+2026-04-12T19:14:10.2463236+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2463269+00:00 xUnit.net INFORMATION            at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2463309+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2463349+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2463880+00:00 xUnit.net INFORMATION            at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+2026-04-12T19:14:10.2564713+00:00 xUnit.net INFORMATION   Finished:    Tests (ID = '986fff2a7a006cc09b209b5c3c7f8bd02ee5ebca422be788f8c022dcca61dc96')
+2026-04-12T19:14:10.2607107+00:00 xUnit.net INFORMATION === TEST EXECUTION SUMMARY ===
+2026-04-12T19:14:10.2637316+00:00 xUnit.net INFORMATION    Tests  Total: 9, Errors: 0, Failed: 9, Skipped: 0, Not Run: 0, Time: 1,085s

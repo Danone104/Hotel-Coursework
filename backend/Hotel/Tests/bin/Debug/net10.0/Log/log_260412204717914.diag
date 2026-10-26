@@ -1,0 +1,39 @@
+2026-04-12T20:47:17.9236100+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Version: 1.9.1+cb5afc3bb9bb01ebd75b57f89e8358b914ee2a49
+2026-04-12T20:47:17.9366371+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging mode: asynchronous
+2026-04-12T20:47:17.9379589+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging level: Information
+2026-04-12T20:47:17.9379663+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION CreateBuilderAsync entry time: 20:47:17.898
+2026-04-12T20:47:17.9380597+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION PID: 7700
+2026-04-12T20:47:17.9380895+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime information: win-x64 - .NET 10.0.2
+2026-04-12T20:47:17.9381090+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime location: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\10.0.2\System.Private.CoreLib.dll
+2026-04-12T20:47:17.9381240+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION IsDynamicCodeSupported: True
+2026-04-12T20:47:17.9382539+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Test module: C:\Users\danyk\source\repos\Hotel\Tests\bin\Debug\net10.0\Tests.dll
+2026-04-12T20:47:17.9385328+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Command line arguments: '--server --diagnostic --diagnostic-verbosity Information --diagnostic-output-directory C:\Users\danyk\source\repos\Hotel\Tests\bin\Debug\net10.0\Log --results-directory C:\Users\danyk\source\repos\Hotel\TestResults --client-port 59576'
+2026-04-12T20:47:17.9394683+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION TESTINGPLATFORM_DEFAULT_HANG_TIMEOUT: ''
+2026-04-12T20:47:17.9588939+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting RegisterEnvironmentVariablesConfigurationSource: 'True'
+2026-04-12T20:47:17.9754394+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting PlatformExitProcessOnUnhandledException: 'False', config file: False environment variable: 
+2026-04-12T20:47:18.2398943+00:00 Microsoft.Testing.Platform.Requests.TestHostTestFrameworkInvoker INFORMATION Test framework UID: '30ea7c6e-dd24-4152-a360-1387158cd41d' Version: '3.2.2' DisplayName: 'xUnit.net v3 Microsoft.Testing.Platform test framework' Description: 'xUnit.net v3 Microsoft.Testing.Platform test framework'
+2026-04-12T20:47:18.2476643+00:00 xUnit.net INFORMATION xUnit.net v3 In-Process Runner v3.2.2+728c1dce01 (64-bit .NET 10.0.2)
+2026-04-12T20:47:18.2935788+00:00 xUnit.net INFORMATION   Discovering: Tests
+2026-04-12T20:47:18.3532821+00:00 xUnit.net INFORMATION   Discovered:  Tests
+2026-04-12T20:47:18.3922646+00:00 xUnit.net INFORMATION   Starting:    Tests
+2026-04-12T20:47:18.6764637+00:00 xUnit.net ERROR     Hotel.Application.UnitTests.Services.EmployeeServiceTests.CreateEmployee_ValidData_CreatesEmployee [FAIL]
+2026-04-12T20:47:18.6774030+00:00 xUnit.net INFORMATION       Moq.MockException : 
+2026-04-12T20:47:18.6774207+00:00 xUnit.net INFORMATION       Expected invocation on the mock once, but was 2 times: x => x.SaveChangesAsync()
+2026-04-12T20:47:18.6774236+00:00 xUnit.net INFORMATION       
+2026-04-12T20:47:18.6774247+00:00 xUnit.net INFORMATION       Performed invocations:
+2026-04-12T20:47:18.6774255+00:00 xUnit.net INFORMATION       
+2026-04-12T20:47:18.6774262+00:00 xUnit.net INFORMATION          Mock<IUserRepository:3> (x):
+2026-04-12T20:47:18.6774270+00:00 xUnit.net INFORMATION       
+2026-04-12T20:47:18.6774277+00:00 xUnit.net INFORMATION             IUserRepository.GetUserByUserName("empuser")
+2026-04-12T20:47:18.6774284+00:00 xUnit.net INFORMATION             IUserRepository.AddUser(User)
+2026-04-12T20:47:18.6774291+00:00 xUnit.net INFORMATION             IUserRepository.SaveChangesAsync()
+2026-04-12T20:47:18.6774298+00:00 xUnit.net INFORMATION             IUserRepository.SaveChangesAsync()
+2026-04-12T20:47:18.6774304+00:00 xUnit.net INFORMATION       
+2026-04-12T20:47:18.6778675+00:00 xUnit.net INFORMATION       Stack Trace:
+2026-04-12T20:47:18.6785737+00:00 xUnit.net INFORMATION         /_/src/Moq/Mock.cs(332,0): at Moq.Mock.Verify(Mock mock, LambdaExpression expression, Times times, String failMessage)
+2026-04-12T20:47:18.6785932+00:00 xUnit.net INFORMATION         /_/src/Moq/Mock`1.cs(840,0): at Moq.Mock`1.Verify[TResult](Expression`1 expression, Func`1 times)
+2026-04-12T20:47:18.6786050+00:00 xUnit.net INFORMATION         C:\Users\danyk\source\repos\Hotel\Tests\UnitTests\Services\EmployeeServiceTest.cs(58,0): at Hotel.Application.UnitTests.Services.EmployeeServiceTests.CreateEmployee_ValidData_CreatesEmployee()
+2026-04-12T20:47:18.6786069+00:00 xUnit.net INFORMATION         --- End of stack trace from previous location ---
+2026-04-12T20:47:18.7055077+00:00 xUnit.net INFORMATION   Finished:    Tests (ID = '986fff2a7a006cc09b209b5c3c7f8bd02ee5ebca422be788f8c022dcca61dc96')
+2026-04-12T20:47:18.7118665+00:00 xUnit.net INFORMATION === TEST EXECUTION SUMMARY ===
+2026-04-12T20:47:18.7163751+00:00 xUnit.net INFORMATION    Tests  Total: 5, Errors: 0, Failed: 1, Skipped: 0, Not Run: 0, Time: 0,324s

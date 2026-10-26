@@ -1,0 +1,10 @@
+.button{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    border: solid 2px;
+    
+    &:disabled{
+        display: none;
+    }
+}
+

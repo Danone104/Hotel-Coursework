@@ -1,0 +1,12 @@
+.footer {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #465070   ;  
+    height: 75px;
+    padding: 10px;
+}
+.copyrighting{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

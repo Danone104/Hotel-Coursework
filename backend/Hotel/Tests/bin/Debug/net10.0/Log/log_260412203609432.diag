@@ -1,0 +1,29 @@
+2026-04-12T20:36:09.4462758+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Version: 1.9.1+cb5afc3bb9bb01ebd75b57f89e8358b914ee2a49
+2026-04-12T20:36:09.4582955+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging mode: asynchronous
+2026-04-12T20:36:09.4591496+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging level: Information
+2026-04-12T20:36:09.4591572+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION CreateBuilderAsync entry time: 20:36:09.421
+2026-04-12T20:36:09.4592490+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION PID: 31160
+2026-04-12T20:36:09.4592820+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime information: win-x64 - .NET 10.0.2
+2026-04-12T20:36:09.4593013+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime location: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\10.0.2\System.Private.CoreLib.dll
+2026-04-12T20:36:09.4593122+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION IsDynamicCodeSupported: True
+2026-04-12T20:36:09.4593903+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Test module: C:\Users\danyk\source\repos\Hotel\Tests\bin\Debug\net10.0\Tests.dll
+2026-04-12T20:36:09.4600468+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Command line arguments: '--server --diagnostic --diagnostic-verbosity Information --diagnostic-output-directory C:\Users\danyk\source\repos\Hotel\Tests\bin\Debug\net10.0\Log --results-directory C:\Users\danyk\source\repos\Hotel\TestResults --client-port 64490'
+2026-04-12T20:36:09.4611851+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION TESTINGPLATFORM_DEFAULT_HANG_TIMEOUT: ''
+2026-04-12T20:36:09.4878357+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting RegisterEnvironmentVariablesConfigurationSource: 'True'
+2026-04-12T20:36:09.4993068+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting PlatformExitProcessOnUnhandledException: 'False', config file: False environment variable: 
+2026-04-12T20:36:09.8203177+00:00 Microsoft.Testing.Platform.Requests.TestHostTestFrameworkInvoker INFORMATION Test framework UID: '30ea7c6e-dd24-4152-a360-1387158cd41d' Version: '3.2.2' DisplayName: 'xUnit.net v3 Microsoft.Testing.Platform test framework' Description: 'xUnit.net v3 Microsoft.Testing.Platform test framework'
+2026-04-12T20:36:09.8286950+00:00 xUnit.net INFORMATION xUnit.net v3 In-Process Runner v3.2.2+728c1dce01 (64-bit .NET 10.0.2)
+2026-04-12T20:36:09.8773853+00:00 xUnit.net INFORMATION   Discovering: Tests
+2026-04-12T20:36:09.9287943+00:00 xUnit.net INFORMATION   Discovered:  Tests
+2026-04-12T20:36:09.9539673+00:00 xUnit.net INFORMATION   Starting:    Tests
+2026-04-12T20:36:10.2166430+00:00 xUnit.net ERROR     Hotel.Application.UnitTests.Services.BookingServiceTests.GetOccupiedDatesByMonthAsync_ReturnsOccupiedDates [FAIL]
+2026-04-12T20:36:10.2171221+00:00 xUnit.net INFORMATION       System.ArgumentNullException : Value cannot be null. (Parameter 'source')
+2026-04-12T20:36:10.2175993+00:00 xUnit.net INFORMATION       Stack Trace:
+2026-04-12T20:36:10.2187539+00:00 xUnit.net INFORMATION            at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+2026-04-12T20:36:10.2187695+00:00 xUnit.net INFORMATION            at System.Linq.Enumerable.SelectMany[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+2026-04-12T20:36:10.2187961+00:00 xUnit.net INFORMATION         C:\Users\danyk\source\repos\Hotel\Hotel.Application\Services\BookingService.cs(31,0): at Hotel.Application.Services.BookingService.GetOccupiedDatesByMonthAsync(Guid roomId, Int32 year, Int32 month)
+2026-04-12T20:36:10.2188213+00:00 xUnit.net INFORMATION         C:\Users\danyk\source\repos\Hotel\Tests\UnitTests\Services\BookingServiceTests.cs(157,0): at Hotel.Application.UnitTests.Services.BookingServiceTests.GetOccupiedDatesByMonthAsync_ReturnsOccupiedDates()
+2026-04-12T20:36:10.2188250+00:00 xUnit.net INFORMATION         --- End of stack trace from previous location ---
+2026-04-12T20:36:10.2929497+00:00 xUnit.net INFORMATION   Finished:    Tests (ID = '986fff2a7a006cc09b209b5c3c7f8bd02ee5ebca422be788f8c022dcca61dc96')
+2026-04-12T20:36:10.2971292+00:00 xUnit.net INFORMATION === TEST EXECUTION SUMMARY ===
+2026-04-12T20:36:10.3059953+00:00 xUnit.net INFORMATION    Tests  Total: 10, Errors: 0, Failed: 1, Skipped: 0, Not Run: 0, Time: 0,345s

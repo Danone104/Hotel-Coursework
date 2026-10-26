@@ -1,0 +1,18 @@
+@Hotel_HostAddress = http://localhost:5262
+
+# POST {{Hotel_HostAddress}}/api/authentication/login
+# ContentType: application/json
+# {
+#   userName: "admin",
+#   password:"admin123"
+# }
+
+GET{{Hotel_HostAddress}}/api/employees/Employees
+
+
+
+
+# # GET {{Hotel_HostAddress}}//
+# # Accept: application/json
+
+###

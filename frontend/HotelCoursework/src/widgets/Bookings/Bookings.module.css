@@ -1,0 +1,73 @@
+.cards-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-block: 50px;
+    gap: 20px;
+    max-width: 1180px;
+    margin: auto;
+}
+
+.paggination-container{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.paggination-button{
+    border-radius: 20px;
+    background-color: #4E4D4D;
+    padding-bottom: 5px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+
+}
+.paggination-button.is-disabled{
+    cursor: not-allowed;
+}
+.paggination-button:not(.paggination-button.is-disabled):hover{
+    background-color: #6c6c6c;
+    cursor:pointer;
+}
+.paggination-button.back{
+    display: none;
+}
+.paggination-button.back-shown{
+    display: block;
+}
+
+.paggination-page{
+    border: 2px solid;
+    padding: 5px;
+    background-color: #6c6c6c;
+    border-radius: 20px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+@media (min-width:2000px){
+    .header__content{
+        max-width: 1920px;
+    }
+    .cards-container{
+        max-width: 1920px;
+    }
+}
+@media (max-width:767px) {
+    .cards-container{
+        justify-content: center;
+    }
+}
+@media (max-width:1180px){
+    .cards-container{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media (max-width:1020px){
+    .cards-container{
+        max-width: 780px;
+    }
+}

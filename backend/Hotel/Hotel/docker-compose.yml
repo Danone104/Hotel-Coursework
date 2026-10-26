@@ -1,0 +1,18 @@
+﻿version: '3.8'
+
+services:
+  hotel-app:
+    build:
+      context: .
+      dockerfile: Hotel/Dockerfile
+    ports:
+      - "5000:80"
+    environment:
+      - DB_PASSWORD=${DB_PASSWORD}
+      - JWT_SECRETKEY=${JWT_SECRETKEY}
+      - ASPNETCORE_ENVIRONMENT=Production
+    volumes:
+      - hotel_images:/app/wwwroot/images
+
+volumes:
+  hotel_images:

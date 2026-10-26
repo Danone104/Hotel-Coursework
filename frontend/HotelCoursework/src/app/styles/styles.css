@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#root{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #AFCAF0;
+}
+.page-content{
+    flex: 1;
+    padding-block:10px ;
+}
+.error{
+    font-size: 50px;
+    text-align: center;
+}
+

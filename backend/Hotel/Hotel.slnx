@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="Domain/Hotel.Domain.csproj" />
+  <Project Path="Hotel.Application/Hotel.Application.csproj" />
+  <Project Path="Hotel.DataAccess/Hotel.DataAccess.csproj" />
+  <Project Path="Hotel/Hotel.API.csproj" />
+  <Project Path="Tests/Tests.csproj" Id="a74b3b5c-c281-4bbd-b3b2-1562547d0be8" />
+</Solution>
